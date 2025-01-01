@@ -35,7 +35,7 @@ const Contact = () => {
 
       <div className="flex flex-col lg:flex-row items-center justify-between gap-10 p-8 bg-gray-100">
         {/* Contact Form */}
-        <div className="flex-1 w-[40%] bg-white shadow-lg rounded-lg p-8">
+        <div className="flex-1 md:w-[40%] bg-white shadow-lg rounded-lg p-8">
           <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
           <form className="space-y-4" ref={form} onSubmit={sendEmail}>
             {/* Name Field */}
@@ -89,7 +89,7 @@ const Contact = () => {
         </div>
 
         {/* Map and Contact Info */}
-        <div className="w-[60%] h-[30rem] shadow-[0px_0px_2px_rgba(0,0,0,0.3)] bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+        <div className="md:w-[60%] h-[30rem] shadow-[0px_0px_2px_rgba(0,0,0,0.3)] bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe
             width="100%"
             height="100%"
@@ -102,7 +102,7 @@ const Contact = () => {
             src={`https://maps.google.com/maps?width=100%&height=600&hl=en&q=${address}&ie=UTF8&t=&z=14&iwloc=B&output=embed`}
             style={{}}
           ></iframe>
-          <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md text-black">
+          <div className="bg-white  relative w-[90%] md:w-full md:h-[35%] h-[45%] flex flex-wrap md:py-6 py-3 rounded shadow-md text-black overflow-hidden">
             <div className="lg:w-1/2 px-6">
               <h2 className="title-font font-bold  tracking-widest text-xs">
                 ADDRESS

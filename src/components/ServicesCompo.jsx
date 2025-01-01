@@ -42,7 +42,7 @@ const ServicesCompo = () => {
       }, []);
 
   return (
-    <div>
+    <div className=" overflow-x-hidden">
       {/* Header */}
       <div className="text-green-700 text-center text-5xl font-bold py-10">
         <h1 className="text-green-700">Our Services</h1>
