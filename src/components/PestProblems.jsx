@@ -8,6 +8,8 @@ import img3 from "../assets/mosquitoes.webp";
 import img4 from "../assets/flies.webp";
 import img5 from "../assets/spiders.webp";
 import img6 from "../assets/bed-bugs.webp";
+import img7 from "../assets/rodents.webp";
+import img8 from "../assets/termites.webp";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -21,9 +23,9 @@ const PestProblems = () => {
     { img: img3, text: "Mosquitoes" },
     { img: img4, text: "Flies" },
     { img: img5, text: "Spiders" },
-    { img: img6, text: "Bed Bugs" },
-    { img: img6, text: "Bed Bugs" },
-    { img: img6, text: "Bed Bugs" },
+    { img: img6, text: "Ticks" },
+    { img: img7, text: "Rat" },
+    { img: img8, text: "Termites" },
   ];
 
   useEffect(() => {

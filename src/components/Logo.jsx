@@ -23,8 +23,8 @@ const Logo = () => {
   ];
 
   return (
-    <div className="w-full text-center">
-      <h1 className="text-3xl font-bold mb-6 text-black py-3 pb-5">Our Partners</h1>
+    <div className="w-full h-full text-center">
+      <h1 className="text-3xl font-bold my-6 text-black py-3 pb-5">Our Partners</h1>
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
@@ -55,11 +55,12 @@ const Logo = () => {
         className="mySwiper"
       >
         {logos.map((logo, index) => (
-          <SwiperSlide key={index} className="flex items-baseline justify-center px-[3.5rem] pb-[1.5rem]  ">
+          <SwiperSlide key={index} className=" h-full flex items-baseline justify-center px-[3.5rem] pb-[1.5rem]  ">
             <img
               src={logo.src}
               alt={logo.name}
-              className="h-30 w-30 object-contain  transition-transform duration-300 hover:scale-105"
+              width={300}
+              className="  object-contain  transition-transform duration-300 hover:scale-105"
             />
             {/* <p className="mt-1 text-sm font-semibold text-black">{logo.name}</p> */}
           </SwiperSlide>

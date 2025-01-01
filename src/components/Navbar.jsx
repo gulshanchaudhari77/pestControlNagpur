@@ -1,16 +1,39 @@
 import React, { useState } from "react";
-import logo from "../assets/logo2.png";
+import logo from "../assets/Newlogo.jpg";
 import { Link, useNavigate } from "react-router-dom";
+import { IoCallOutline } from "react-icons/io5";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const phoneNumber = "+918408094772";
+
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle menu visibility
+
+  <style>
+{`
+@keyframes rotateAll {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.group-hover\\:animate-rotate-all:hover {
+  animation: rotateAll 0.5s ease-in-out;
+}
+`}
+</style>
 
   return (
     <div className="bg-green-800 px-5 md:px-28 py-3.5 flex items-center justify-between relative">
       {/* Logo */}
       <div>
-        <img src={logo} alt="logo" width={75} className="" />
+        <img
+          src={logo}
+          alt="logo"
+          className="h-12 rounded-lg" // Adjust height as needed
+        />
         {/* <h1 className=" text-4xl font-bold leading-[1.4rem] text-green-500">CPC</h1>
         <p className=" text-yellow-400 pl-[0.5rem] ">Nagpur</p> */}
       </div>
@@ -103,38 +126,36 @@ const Navbar = () => {
 
       {/* Desktop Navigation (Unchanged) */}
       {/* <div className=""> */}
-        <div className="hidden md:flex  w-full justify-end items-center pr-[15rem] gap-24 text-lg font-semibold text-white">
-          <Link
-            className="hover:text-gray-200 cursor-pointer"
-            to={"/"}
-          >
-            Home 
-          </Link>
-          {/* <Link
+      <div className="hidden md:flex  w-full justify-end items-center pr-[4rem] gap-24 text-lg font-semibold text-white">
+        <Link className="hover:text-gray-200 cursor-pointer" to={"/"}>
+          Home
+        </Link>
+        {/* <Link
             className="hover:text-gray-200 cursor-pointer"
             to={"/"}
           >
             Home
           </Link> */}
-          <Link
-            className="hover:text-gray-200 cursor-pointer"
-            to={"/about"}
-          >
-            About
-          </Link>
-          <Link
-            className="hover:text-gray-200 cursor-pointer"
-            to={"/services"}
-          >
-            Services
-          </Link>
-          <Link
-            className="hover:text-gray-200 cursor-pointer"
-            to={"/contact"}
-          >
-            Contact Us
-          </Link>
-        </div>
+        <Link className="hover:text-gray-200 cursor-pointer" to={"/about"}>
+          About
+        </Link>
+        <Link className="hover:text-gray-200 cursor-pointer" to={"/services"}>
+          Services
+        </Link>
+        <Link className="hover:text-gray-200 cursor-pointer" to={"/contact"}>
+          Contact us
+        </Link>
+
+        <Link
+          to="tel:+918408094772"
+          className="text-lg bg-green-800 w-[9.4rem] rounded py-2 hover:bg-green-900 text-center flex items-center justify-center gap-2 text-white hover:bottom-5"
+        >
+          <IoCallOutline     
+ />
+          <span>8408094772</span>
+        </Link>
+      </div>
+
       {/* </div> */}
     </div>
   );

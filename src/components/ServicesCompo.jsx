@@ -3,15 +3,17 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import image1 from "../assets/servicesNew1.png"; // Replace with your common background image path
-import serviimg1 from "../assets/servicesimg1.png";
-import serviimg2 from "../assets/servicesimg2.png";
-import serviimg3 from "../assets/servicesimg3.png";
-import serviimg4 from "../assets/servicesing4.png"; // Fixed typo in image path
+import serviimg1 from "../assets/Services-Image-1.png";
+import serviimg2 from "../assets/servisecimg2.png";
+import serviimg3 from "../assets/Services-Image-3.png";
+import serviimg4 from "../assets/Services-Image-4.png"; // Fixed typo in image path
+import { useNavigate } from "react-router-dom";
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const ServicesCompo = () => {
+  const navigate = useNavigate();
 
     const boxRefs = useRef([]); // Array of refs for the service boxes
       const sectionRef = useRef(null); // Ref for the whole section
@@ -55,10 +57,11 @@ const ServicesCompo = () => {
         {/* Services Section */}
         <div className="flex flex-wrap gap-5 justify-center p-5 sm:p-10 lg:p-20">
           {[
-            { img: serviimg3, title: "Fumigation" },
-            { img: serviimg1, title: "Pest Control" },
-            { img: serviimg2, title: "Sanitization" },
-            { img: serviimg4, title: "Disinfection" },
+            { img: serviimg1, title: "Rodent Control" , desc:"Eliminate rodents with our expert solutions, ensuring a safe, rodent-free environment." },
+            { img: serviimg2, title: "Insect Control" ,desc:"Protect your space with effective insect control for ants, cockroaches, mosquitoes, and more." },
+            { img: serviimg3, title: "Termite Control",desc:"Safeguard your property from termites with our advanced detection and treatment methods." },
+
+            { img: serviimg4, title: "Fumigation", desc:"Get highly effective pest control on scheduled day. We always use good quality products." },
           ].map((service, index) => (
             <div
               key={index}
@@ -67,17 +70,17 @@ const ServicesCompo = () => {
             >
               <img
                 src={service.img}
-                alt={service.title}
+                alt={service}
                 className="w-full h-[200px] sm:h-[250px] md:h-[310.5px] object-cover"
               />
-              <div className="absolute bottom-0 w-full bg-white bg-opacity-70 p-4">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
+              <div className="absolute bottom-0 w-full bg-white  p-4">
+                <h1 className="  md:text-4xl font-semibold">
                   {service.title}
                 </h1>
-                <p className="text-sm sm:text-base md:text-xl">
-                  Lorem ipsum dolor sit amet <br /> consectetur adipiscing.
+                <p className="text-0.456rem  md:text-xl">
+                  {service.desc}
                 </p>
-                <button className="px-3 sm:px-4 py-2 bg-green-700 text-white rounded-lg mt-3">
+                <button onClick={() => navigate("/contact")} className=" px-3 sm:px-4 py-2 bg-green-700 text-white rounded-lg mt-3">
                   Book Now
                 </button>
               </div>
