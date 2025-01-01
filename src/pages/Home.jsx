@@ -79,8 +79,8 @@ const Home = () => {
 
         {/* image */}
         <div className="md:relative bg-gradient-to-r  md:w-[38%] from-green-700 to-green-900">
-          <div className="md:w-[20rem] md:h-[12rem] w-[10rem] h-[11rem] bg-yellow-300  absolute left-[1.2rem] bottom-[-6rem] md:bottom-0 md:left-[-4rem]"></div>
-          <div className="md:w-[20rem] md:h-[21rem] w-[15rem] h-[8rem] bg-yellow-300  absolute right-5 bottom-[-6rem]  md:bottom-0 md:left-[10rem]"></div>
+          <div className="md:w-[20rem] md:h-[12rem] w-[10rem] h-[11rem] bg-yellow-300  absolute left-[1.2rem] bottom-[-4rem] md:bottom-0 md:left-[-4rem]"></div>
+          <div className="md:w-[20rem] md:h-[21rem] w-[15rem] h-[8rem] bg-yellow-300  absolute right-5 bottom-[-4rem]  md:bottom-0 md:left-[10rem]"></div>
 
           <div className="box border-4 border-yellow-400 md:w-[13rem] md:h-[10rem] text-center absolute left-[12rem] top-[24.4rem] md:left-[14rem] md:top-9 m-auto md:py-5 p-[0.69rem] rounded-lg shadow-lg">
             <h1 className="md:text-5xl text-xl font-semibold">
