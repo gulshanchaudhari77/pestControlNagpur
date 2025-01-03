@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import ServicesCompo from "../components/ServicesCompo";
 import AboutCompo from "../components/AboutCompo";
 import WhyChooseUs from "../components/WhyChooseUs";
+import PestInformation from "../components/PestInformation";
 
 const Home = () => {
   const phoneNumber = "+918408094772";
@@ -60,7 +61,7 @@ const Home = () => {
             className=" home-p md:text-5xl text-xl text-yellow-300 font-semibold "
             ref={textRef}
           >
-            THE CONTINENTAL PEST CONTROL NAGPUR
+            CONTINENTAL PEST CONTROL NAGPUR
           </p>
           <h1 className=" home-h1 md:text-3xl  md:leading-[5rem]">
             Safeguarding Your Home & Health
@@ -70,7 +71,7 @@ const Home = () => {
             of Trust
           </p>
           <Link
-            to="tel:+918408094772"
+            to="tel:+918087209636"
             className="text-lg bg-green-800 w-[9.4rem] rounded py-2 hover:bg-green-900 text-center"
           >
             Call for Booking
@@ -84,7 +85,7 @@ const Home = () => {
 
           <div className="box border-4 border-yellow-400 md:w-[13rem] md:h-[10rem] text-center absolute left-[12rem] top-[24.4rem] md:left-[14rem] md:top-9 m-auto md:py-5 p-[0.69rem] rounded-lg shadow-lg">
             <h1 className="md:text-5xl text-xl font-semibold">
-              30+<sup className="md:text-2xl align-super">th</sup>
+              30+
             </h1>
             <p className="md:text-3xl font-semibold">Years of Experience</p>
           </div>
@@ -104,6 +105,7 @@ const Home = () => {
       <WhyChooseUs />
       <Testimonials />
       <Reviews />
+      {/* <PestInformation/> */}
     </div>
   );
 };

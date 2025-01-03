@@ -18,13 +18,13 @@ const Footer = () => {
           <h3 className="text-2xl font-semibold mb-4">Contact Info</h3>
           <ul>
             <li className="text-gray-400 mb-2">
-              <strong>Email:</strong> contact@continentalpest.com
+              <strong>Email:</strong> continentalcp6@gmail.com
             </li>
             <li className="text-gray-400 mb-2">
-              <strong>Phone:</strong> +91 123 456 7890
+              <strong>Phone:</strong> +918087209636
             </li>
             <li className="text-gray-400 mb-2">
-              <strong>Address:</strong> 123 Pest Control Street, Nagpur, India
+              <strong>Address:</strong> F/3, Utkarsh Uttra Apartment, New Colony, New Colony, Nagpur, Maharashtra 440001
             </li>
           </ul>
         </div>

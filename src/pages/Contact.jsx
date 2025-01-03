@@ -7,9 +7,12 @@ import { FaWhatsapp } from "react-icons/fa";
 const Contact = () => {
   const form = useRef();
 
-  const user_id = "iZjw9qzVfg30cDB4B"; // EmailJS user ID
-  const serviceId = "service_71ftivr";
-  const templateId = "template_utb7j52";
+  const user_id = "ndmihN4Qk3cUxpxLp"; // EmailJS user ID
+  const serviceId = "service_9hfiah5"
+  const templateId = "template_oqvba6o";
+
+  // AIzaSyBKUMbTkys2EU1JCkQxLxigM5ADix5Bn8k
+  // Place ID: ChIJVVVVJR7B1DsRG1y1z4RgkyY
 
   const sendEmail = (e) => {
     e.preventDefault();

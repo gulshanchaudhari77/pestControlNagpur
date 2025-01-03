@@ -5,7 +5,7 @@ import { IoCallOutline } from "react-icons/io5";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const phoneNumber = "+918408094772";
+  const phoneNumber = "+918087209636"
 
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle menu visibility
 
@@ -152,7 +152,7 @@ const Navbar = () => {
         >
           <IoCallOutline     
  />
-          <span>8408094772</span>
+          <span>+918087209636</span>
         </Link>
       </div>
 

@@ -10,22 +10,24 @@ import img5 from "../assets/spiders.webp";
 import img6 from "../assets/bed-bugs.webp";
 import img7 from "../assets/rodents.webp";
 import img8 from "../assets/termites.webp";
+import { useNavigate } from "react-router-dom";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const PestProblems = () => {
+  const navigate = useNavigate();
   const pestRefs = useRef([]);
 
   const pests = [
-    { img: img1, text: "Ants" },
-    { img: img2, text: "Cockroaches" },
-    { img: img3, text: "Mosquitoes" },
-    { img: img4, text: "Flies" },
-    { img: img5, text: "Spiders" },
-    { img: img6, text: "Ticks" },
-    { img: img7, text: "Rat" },
-    { img: img8, text: "Termites" },
+    { img: img8, text: "Termites", link:'termites'},
+    { img: img2, text: "Cockroaches" , link: 'cockroaches'},
+    { img: img3, text: "Mosquitoes", link:'mosquitoes' },
+    { img: img7, text: "Rat", link:'rat' },
+    { img: img1, text: "Ants", link:'ants' },
+    { img: img5, text: "Spiders", link:'spiders' },
+    { img: img4, text: "Flies", link:'flies' },
+    { img: img6, text: "Ticks", link:'ticks' },
   ];
 
   useEffect(() => {
@@ -58,16 +60,17 @@ const PestProblems = () => {
     <div className="p-8 py-16 bg-gray-100 text-black">
       {/* Heading */}
       <h2 className="text-4xl font-bold text-center text-green-700 mb-8">
-        Common Pest Problems
+        Our Services
       </h2>
 
       {/* Pest Boxes */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 cursor-pointer gap-8">
         {pests.map((pest, index) => (
           <div
             key={index}
             ref={(el) => (pestRefs.current[index] = el)} // Assign reference for scroll-trigger
             className="bg-white shadow-lg rounded-lg p-3 flex gap-3 items-center justify-center"
+            onClick={() => navigate(`/servicesInfo/${pest.link}`)}
           >
             <img 
               src={pest.img}
